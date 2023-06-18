@@ -14,7 +14,7 @@ export async function fetchApi<T>(
     apiKey?: string
   }
 ): Promise<T> {
-  assertString(apiKey, 'No OpenAPI API Key provided')
+  assertString(apiKey, 'No OpenAI API Key provided')
 
   const response = await fetch(`${OPENAI_ENDPOINT}${path}`, {
     method,
